@@ -1,0 +1,76 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <h3>Contact Information</h3>
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Contact Job Title:
+    <input type="text" formControlName="contactJobTitle" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Contact Email:
+    <input type="text" formControlName="contactEmail" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Contact Phone:
+    <input type="text" formControlName="contactPhone" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Organization/Company Name:
+    <input type="text" formControlName="companyName" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Organization Address:
+    <input type="text" formControlName="organizationAddress" required /><br />
+  </label>
+  <hr style="border: none" />
+  <label>
+    Organization Website:
+    <input type="text" formControlName="organizationWebsite" required /><br />
+  </label>
+
+  <div formGroupName="address">
+    <h3>Proposal</h3>
+
+    <label>
+      Project Title:
+      <input type="text" formControlName="projectTitle" required/><br />
+    </label>
+    <hr style="border: none" />
+
+    <label>
+      Description of Project:
+      <input type="text" formControlName="descriptionOfProject" required/><br />
+    </label>
+    <hr style="border: none" />
+    <label>
+      Duties of the Students:
+      <input type="text" formControlName="studentDuties" /><br />
+    </label>
+    <hr style="border: none" />
+
+    <label>
+      Learning Benefits:
+      <input type="text" formControlName="learningBenefits" /><br />
+    </label>
+    <hr style="border: none" />
+
+    <label>
+      Provided equipment:
+      <input type="text" formControlName="providedEquipment" />
+    </label>
+    <hr style="border: none" />
+  </div>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
